@@ -1,0 +1,6 @@
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.Common\bin\Debug\EasyKey.Common.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.Common\bin\Debug\EasyKey.Common.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.Common\obj\Debug\EasyKey.Common.csproj.CoreCompileInputs.cache
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.Common\obj\Debug\EasyKey.Common.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.Common\obj\Debug\EasyKey.Common.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.Common\obj\Debug\EasyKey.Common.csprojAssemblyReference.cache

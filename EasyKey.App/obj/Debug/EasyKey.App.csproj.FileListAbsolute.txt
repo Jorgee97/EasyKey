@@ -1,0 +1,15 @@
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\bin\Debug\EasyKey.App.exe.config
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\bin\Debug\EasyKey.App.exe
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\bin\Debug\EasyKey.App.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.csprojAssemblyReference.cache
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\App.g.cs
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App_MarkupCompile.cache
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App_MarkupCompile.lref
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.g.resources
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.Properties.Resources.resources
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.csproj.GenerateResource.cache
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.csproj.CoreCompileInputs.cache
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.exe
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\LoginWindow.g.cs
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\LoginWindow.baml

@@ -1,0 +1,16 @@
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\EasyKey.BL.Test.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\EasyKey.BL.Test.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\EasyKey.Common.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\EasyKey.Common.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\obj\Debug\EasyKey.BL.Test.csprojAssemblyReference.cache
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\obj\Debug\EasyKey.BL.Test.csproj.CoreCompileInputs.cache
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\obj\Debug\EasyKey.BL.Test.csproj.CopyComplete
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\obj\Debug\EasyKey.BL.Test.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\obj\Debug\EasyKey.BL.Test.pdb
