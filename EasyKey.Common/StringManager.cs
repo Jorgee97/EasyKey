@@ -9,7 +9,13 @@ namespace EasyKey.Common
 {
     public class StringManager
     {
-        public Boolean ValidatePassword(string password)
+        public static Boolean ValidateString(string value, string valueName)
+        {
+            if (String.IsNullOrWhiteSpace(value)) throw new ArgumentException($"The {valueName} cannot be empty.");
+            return true;
+        }
+
+        public static Boolean ValidatePassword(string password)
         {
             var hasNumber = new Regex(@"[0-9]+");
             var hasUpperChar = new Regex(@"[A-Z]+");
@@ -22,6 +28,5 @@ namespace EasyKey.Common
 
             return true;
         }
-
     }
 }

@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileManagerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +59,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EasyKey.BL\EasyKey.BL.csproj">
+      <Project>{f9fe707b-9c49-481c-bb3c-624cd3dc7eb0}</Project>
+      <Name>EasyKey.BL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EasyKey.Common\EasyKey.Common.csproj">
       <Project>{a599edc9-7b44-405a-bb52-73a65d65e251}</Project>
       <Name>EasyKey.Common</Name>

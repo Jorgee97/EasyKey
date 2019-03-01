@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasyKey.BL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,25 @@ namespace EasyKey.App
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            LogOrCreateUser();
+        }
+
+        private void LogOrCreateUser()
+        {
+            var user = new User(username.Text, password.Text);
+            var createUser = user.AttempLoginOrCreateConfigFile();
+
+            if (!createUser.Success)
+            {
+                MessageBox.Show(createUser.Message);
+            } else
+            {
+                MessageBox.Show(createUser.Message);
+            }
         }
     }
 }

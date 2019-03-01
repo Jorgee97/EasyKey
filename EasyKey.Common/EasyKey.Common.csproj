@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileManager.cs" />
     <Compile Include="FileLogger.cs" />
     <Compile Include="LoggerBase.cs" />
     <Compile Include="LoggerHelper.cs" />
     <Compile Include="LoggerTarget.cs" />
+    <Compile Include="OperationResult.cs" />
     <Compile Include="StringManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

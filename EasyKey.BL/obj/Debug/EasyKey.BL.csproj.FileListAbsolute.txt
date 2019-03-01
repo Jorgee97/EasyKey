@@ -3,3 +3,7 @@ C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL\bin\Debug\EasyKey.BL.pdb
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL\obj\Debug\EasyKey.BL.csproj.CoreCompileInputs.cache
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL\obj\Debug\EasyKey.BL.dll
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL\obj\Debug\EasyKey.BL.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL\bin\Debug\EasyKey.Common.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL\bin\Debug\EasyKey.Common.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL\obj\Debug\EasyKey.BL.csprojAssemblyReference.cache
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL\obj\Debug\EasyKey.BL.csproj.CopyComplete

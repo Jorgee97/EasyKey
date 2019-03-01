@@ -14,3 +14,5 @@ C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\obj\Debug\EasyKey.BL.T
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\obj\Debug\EasyKey.BL.Test.csproj.CopyComplete
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\obj\Debug\EasyKey.BL.Test.dll
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\obj\Debug\EasyKey.BL.Test.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\EasyKey.BL.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.BL.Test\bin\Debug\EasyKey.BL.pdb

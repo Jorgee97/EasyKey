@@ -13,8 +13,7 @@ namespace EasyKey.BL.Test
             var password = "Password0";
             var expected = true;
 
-            var stringManager = new StringManager();
-            var actual = stringManager.ValidatePassword(password);
+            var actual = StringManager.ValidatePassword(password);
 
             Assert.AreEqual(expected, actual);
         }
@@ -24,8 +23,7 @@ namespace EasyKey.BL.Test
         public void ValidatePasswordInvalidEmptyTest()
         {
             var password = "";
-            var stringManager = new StringManager();
-            var actual = stringManager.ValidatePassword(password);
+            var actual = StringManager.ValidatePassword(password);
         }
 
         [TestMethod]
@@ -33,9 +31,8 @@ namespace EasyKey.BL.Test
         public void ValidatePasswordInvalidNoUppercaseTest()
         {
             var password = "password0";
-           
-            var stringManager = new StringManager();
-            var actual = stringManager.ValidatePassword(password);
+
+            var actual = StringManager.ValidatePassword(password);
         }
 
         [TestMethod]
@@ -44,8 +41,7 @@ namespace EasyKey.BL.Test
         {
             var password = "Password";
             
-            var stringManager = new StringManager();
-            var actual = stringManager.ValidatePassword(password);
+            var actual = StringManager.ValidatePassword(password);
         }
 
         [TestMethod]
@@ -54,8 +50,7 @@ namespace EasyKey.BL.Test
         {
             var password = "Passwor";
 
-            var stringManager = new StringManager();
-            var actual = stringManager.ValidatePassword(password);
+            var actual = StringManager.ValidatePassword(password);
         }
     }
 }

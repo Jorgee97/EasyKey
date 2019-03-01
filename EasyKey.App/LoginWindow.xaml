@@ -21,7 +21,7 @@
             <Label Content="Password" Margin="40,258,0,0" Foreground="#FFEEEEEE" FontFamily="Quicksand" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <TextBox x:Name="username" Height="23" Margin="47,207,0,0" TextWrapping="Wrap" Text="" Width="242" Background="#FF797979" FontFamily="Quicksand" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <TextBox x:Name="password" Height="23" Margin="47,286,0,0" TextWrapping="Wrap" Text="" Width="242" Background="#FF797979" FontFamily="Quicksand" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Button Content="Login" Margin="119,366,0,0" Width="109" FontFamily="Quicksand" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button x:Name="BtnLogin" Content="Login" Margin="119,366,0,0" Width="109" FontFamily="Quicksand" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnLogin_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="#FF4AFACE"/>

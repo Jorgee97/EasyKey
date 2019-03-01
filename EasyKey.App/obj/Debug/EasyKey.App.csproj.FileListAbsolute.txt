@@ -13,3 +13,8 @@ C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.exe
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.pdb
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\LoginWindow.g.cs
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\LoginWindow.baml
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\bin\Debug\EasyKey.BL.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\bin\Debug\EasyKey.Common.dll
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\bin\Debug\EasyKey.BL.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\bin\Debug\EasyKey.Common.pdb
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.csproj.CopyComplete
