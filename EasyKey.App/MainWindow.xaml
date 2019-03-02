@@ -1,0 +1,72 @@
+﻿<Window x:Class="EasyKey.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasyKey.App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid Background="#FF4A4A4A">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Row="0" Grid.Column="0">
+            <Label Content="EasyKey" Margin="16,0" FontFamily="Rockwell Extra Bold" FontSize="40" Background="Transparent" Foreground="#FF4DF9D3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </Viewbox>
+
+        <Button Grid.Row="1" Grid.Column="0" x:Name="btnCreatePassword" Content="Create New Password" Margin="16" FontFamily="Quicksand" FontSize="14">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4AFACE"/>
+                    <GradientStop Color="#FF58F2EB" Offset="0.86"/>
+                    <GradientStop Color="#FF57EFE1" Offset="0.56"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="0" x:Name="btnImportPassword" Content="Import Passwords" Margin="16" FontFamily="Quicksand" FontSize="14">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4AFACE"/>
+                    <GradientStop Color="#FF58F2EB" Offset="0.86"/>
+                    <GradientStop Color="#FF57EFE1" Offset="0.56"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="0" x:Name="btnExportPassword" Content="Export Passwords" Margin="16" FontFamily="Quicksand" FontSize="14">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4AFACE"/>
+                    <GradientStop Color="#FF58F2EB" Offset="0.86"/>
+                    <GradientStop Color="#FF57EFE1" Offset="0.56"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="5" Grid.Column="0" x:Name="btnSettings" Content="Settings" Margin="16" FontFamily="Quicksand" FontSize="14">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4AFACE"/>
+                    <GradientStop Color="#FF58F2EB" Offset="0.86"/>
+                    <GradientStop Color="#FF57EFE1" Offset="0.56"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Frame x:Name="Content" Grid.Column="1" Grid.RowSpan="6" NavigationUIVisibility="Hidden" FontFamily="Quicksand" FontSize="14" Background="BlueViolet"></Frame>
+        <DataGrid Grid.Column="1" Margin="16" Grid.RowSpan="6" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Name"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Username"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Email"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Password"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

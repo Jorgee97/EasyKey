@@ -19,9 +19,9 @@ namespace EasyKey.App
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
         }
@@ -42,6 +42,10 @@ namespace EasyKey.App
             } else
             {
                 MessageBox.Show(createUser.Message);
+
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
             }
         }
     }

@@ -57,5 +57,33 @@ namespace EasyKey.BL
 
             return user;
         }
+
+        public bool CreateEasyKeyFile(string path)
+        {
+            StringManager.ValidateString(path, nameof(path));
+
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                Indent = true,
+                NewLineOnAttributes = true
+            };
+
+            using (XmlWriter writer = XmlWriter.Create(path, settings))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Accounts");
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+            }
+
+            return true;
+        }
+
+        public bool AppendToEasyKeyFile(string path)
+        {
+            // TODO: append
+
+            return true;
+        }
     }
 }
