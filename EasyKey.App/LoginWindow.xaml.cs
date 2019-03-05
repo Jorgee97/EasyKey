@@ -41,9 +41,7 @@ namespace EasyKey.App
                 MessageBox.Show(createUser.Message);
             } else
             {
-                MessageBox.Show(createUser.Message);
-
-                MainWindow mainWindow = new MainWindow();
+                MainWindow mainWindow = new MainWindow(user);
                 mainWindow.Show();
                 this.Close();
             }

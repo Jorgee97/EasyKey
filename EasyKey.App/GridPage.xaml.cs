@@ -11,35 +11,39 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace EasyKey.App
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for GridPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GridPage : Page
     {
         public User UserInformation { get; set; }
-
-        public MainWindow()
+        public GridPage()
         {
             InitializeComponent();
         }
 
-        public MainWindow(User user)
+        public GridPage(User userInformation)
         {
-            UserInformation = user;
+            UserInformation = userInformation;
             InitializeComponent();
-
-            var gridPage = new GridPage(UserInformation);
-            Content.Navigate(gridPage);
+            DisplayAccounts();
         }
 
-        private void BtnCreatePassword_Click(object sender, RoutedEventArgs e)
+        private void DisplayAccounts()
         {
-            var addAccount = new AddAccount(UserInformation);
-            Content.Navigate(addAccount);
+            var fileManager = new FileManager();
+            List<Account> accounts = fileManager.ReadEasyKeyFile(UserInformation.FilePath);
+
+            foreach (var account in accounts)
+            {
+                AccountHolder.Items.Add(account);
+            }
+
         }
     }
 }

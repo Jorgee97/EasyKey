@@ -39,6 +39,11 @@ namespace EasyKey.BL
             return true;
         }
 
+        public bool ValidateFileExist(string path)
+        {
+            return File.Exists(path);
+        }
+
         public User ReadConfigFile(string path)
         {
             StringManager.ValidateString(path, nameof(path));
@@ -79,11 +84,42 @@ namespace EasyKey.BL
             return true;
         }
 
-        public bool AppendToEasyKeyFile(string path)
+        public bool AppendToEasyKeyFile(string path, Account accountInformation)
         {
-            // TODO: append
+            StringManager.ValidateString(path, nameof(path));
+
+            XDocument easyKeyFile = XDocument.Load(path);
+            XElement root = new XElement("Account");
+            root.Add(new XElement("Name", accountInformation.Name),
+                new XElement("Email", accountInformation.Email),
+                new XElement("Username", accountInformation.Username),
+                new XElement("Password", accountInformation.Password));
+            easyKeyFile.Element("Accounts").Add(root);
+            easyKeyFile.Save(path);
 
             return true;
+        }
+
+        public List<Account> ReadEasyKeyFile(string path)
+        {
+            StringManager.ValidateString(path, nameof(path));
+            List<Account> accounts = new List<Account>();
+
+            XElement easyKeyFile = XElement.Load(path);
+            var accountsInfo = (from account in easyKeyFile.Elements("Account") select account);
+
+            foreach (var account in accountsInfo)
+            {
+                accounts.Add(new Account
+                {
+                    Name = account.Element("Name").Value,
+                    Username = account.Element("Username").Value,
+                    Email = account.Element("Email").Value,
+                    Password = account.Element("Password").Value
+                });
+            }
+
+            return accounts;
         }
     }
 }

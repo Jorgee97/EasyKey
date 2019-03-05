@@ -29,14 +29,8 @@ namespace EasyKey.BL
 
         public OperationResult AttempLoginOrCreateConfigFile()
         {
-            if (File.Exists(FileConfigPath))
-            {
-                return LoginUser();
-            }
-            else
-            {
-                return CreateUserConfigFile();
-            }
+            if (File.Exists(FileConfigPath)) return LoginUser();
+            return CreateUserConfigFile();
         }
 
         public OperationResult LoginUser()

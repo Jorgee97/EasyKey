@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Accounts>
+  <Account>
+    <Name>Facebook</Name>
+    <Email>john@doe.com</Email>
+    <Username>John Doe</Username>
+    <Password>somepassword</Password>
+  </Account>
+  <Account>
+    <Name>Instagram</Name>
+    <Email>john@doe.com2</Email>
+    <Username>John Doe2</Username>
+    <Password>somepassword2</Password>
+  </Account>
+</Accounts>

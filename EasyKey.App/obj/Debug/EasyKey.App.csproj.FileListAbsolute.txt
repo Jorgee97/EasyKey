@@ -20,3 +20,7 @@ C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\bin\Debug\EasyKey.Common.p
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\EasyKey.App.csproj.CopyComplete
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\MainWindow.g.cs
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\MainWindow.baml
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\AddAccount.g.cs
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\GridPage.g.cs
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\AddAccount.baml
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\GridPage.baml

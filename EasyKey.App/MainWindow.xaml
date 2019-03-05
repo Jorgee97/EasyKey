@@ -23,7 +23,7 @@
             <Label Content="EasyKey" Margin="16,0" FontFamily="Rockwell Extra Bold" FontSize="40" Background="Transparent" Foreground="#FF4DF9D3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </Viewbox>
 
-        <Button Grid.Row="1" Grid.Column="0" x:Name="btnCreatePassword" Content="Create New Password" Margin="16" FontFamily="Quicksand" FontSize="14">
+        <Button Grid.Row="1" Grid.Column="0" x:Name="btnCreatePassword" Content="Create New Password" Margin="16" FontFamily="Quicksand" FontSize="14" Click="BtnCreatePassword_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FF4AFACE"/>
@@ -60,13 +60,6 @@
             </Button.Background>
         </Button>
         <Frame x:Name="Content" Grid.Column="1" Grid.RowSpan="6" NavigationUIVisibility="Hidden" FontFamily="Quicksand" FontSize="14" Background="BlueViolet"></Frame>
-        <DataGrid Grid.Column="1" Margin="16" Grid.RowSpan="6" >
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Name"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Username"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Email"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Password"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        
     </Grid>
 </Window>

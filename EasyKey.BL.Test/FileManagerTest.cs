@@ -67,5 +67,93 @@ namespace EasyKey.BL.Test
             FileManager fileManager = new FileManager();
             var actual = fileManager.ReadConfigFile("");
         }
+
+        [TestMethod]
+        public void CreateEasyKeyFileValidTest()
+        {
+            var user = new User();
+            var fileManager = new FileManager();
+
+            var expected = true;
+            fileManager.CreateEasyKeyFile(user.FilePath);
+
+            var actual = File.Exists(user.FilePath);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "The path cannot be empty")]
+        public void CreateEasyKeyFileInvalidPathEmptyTest()
+        {
+            var user = new User();
+            user.FilePath = String.Empty;
+            FileManager fileManager = new FileManager();
+            fileManager.CreateEasyKeyFile(user.FilePath);            
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(DirectoryNotFoundException))]
+        public void CreateEasyKeyFileInvalidPathTest()
+        {
+            var user = new User();
+            user.FilePath = $"{Environment.CurrentDirectory} /Somepath.cpm";
+            FileManager fileManager = new FileManager();
+            fileManager.CreateEasyKeyFile(user.FilePath);
+        }
+
+        [TestMethod]
+        public void AppendToEasyKeyFileValidTest()
+        {
+            var user = new User();
+            var account = new Account
+            {
+                Name = "Facebook",
+                Email = "john@doe.com",
+                Password = "Somepassword",
+                Username = "John Doe"
+            };
+
+            FileManager fileManager = new FileManager();
+            var expected = true;
+            var actual = fileManager.AppendToEasyKeyFile(user.FilePath, account);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(DirectoryNotFoundException))]
+        public void AppendToEasyKeyFileInvalidPathTest()
+        {
+            var user = new User();
+            user.FilePath = $"{Environment.CurrentDirectory} /Somepath.cpm";
+            var account = new Account
+            {
+                Name = "Facebook",
+                Email = "john@doe.com",
+                Password = "Somepassword",
+                Username = "John Doe"
+            };
+            
+            FileManager fileManager = new FileManager();
+            fileManager.AppendToEasyKeyFile(user.FilePath, account);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "The path cannot be empty")]
+        public void AppendToEasyKeyFileInvalidPathEmptyTest()
+        {
+            var user = new User();
+            user.FilePath = "";
+            var account = new Account
+            {
+                Name = "Facebook",
+                Email = "john@doe.com",
+                Password = "Somepassword",
+                Username = "John Doe"
+            };
+            
+            FileManager fileManager = new FileManager();
+            fileManager.AppendToEasyKeyFile(user.FilePath, account);
+        }
     }
 }

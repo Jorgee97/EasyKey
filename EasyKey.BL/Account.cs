@@ -12,48 +12,36 @@ namespace EasyKey.BL
     {
         public string Name { get; set; }
         public string Email { get; set; }
-        public User UserInformation { get; set; }
-        public Account(User userInformation, string email)
+        public string Password { get; set; }
+        public string Username { get; set; }
+        public Account()
         {
-            UserInformation = userInformation;
-            Email = email;
         }
 
-        public bool ValidateEasyKeyFileExist()
-        {
-            return File.Exists(UserInformation.FilePath);
-        }
-
-        public OperationResult AddAccount()
+        public OperationResult AddAccount(User userInformation)
         {
             var op = new OperationResult
             {
                 Success = true
             };
             var fileManager = new FileManager();
+            var doesEasyKeyFileExist = fileManager.ValidateFileExist(userInformation.FilePath);
 
-            if (!ValidateEasyKeyFileExist())
+            try
             {
-                try
-                {
-                    fileManager.CreateEasyKeyFile(UserInformation.FilePath);
-                }
-                catch (ArgumentException e)
-                {
-                    op.Success = false;
-                    op.Message = e.Message;
-                }
-                catch (DirectoryNotFoundException e)
-                {
-                    op.Success = false;
-                    op.Message = e.Message;
-                    LoggerHelper.Log(LoggerTarget.File, e.Message);
-                }
+                if (!doesEasyKeyFileExist) fileManager.CreateEasyKeyFile(userInformation.FilePath);
+                fileManager.AppendToEasyKeyFile(userInformation.FilePath, this);
             }
-
-            if (op.Success)
+            catch (ArgumentException e)
             {
-
+                op.Success = false;
+                op.Message = e.Message;
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                op.Success = false;
+                op.Message = e.Message;
+                LoggerHelper.Log(LoggerTarget.File, e.Message);
             }
 
             return op;
