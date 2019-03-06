@@ -12,4 +12,28 @@
     <Username>John Doe2</Username>
     <Password>somepassword2</Password>
   </Account>
+  <Account>
+    <Name>MySpace</Name>
+    <Email>theemail@email.com</Email>
+    <Username>theuser</Username>
+    <Password>apassword</Password>
+  </Account>
+  <Account>
+    <Name>d</Name>
+    <Email>d</Email>
+    <Username>d</Username>
+    <Password>d</Password>
+  </Account>
+  <Account>
+    <Name></Name>
+    <Email></Email>
+    <Username></Username>
+    <Password></Password>
+  </Account>
+  <Account>
+    <Name>da</Name>
+    <Email>dsa</Email>
+    <Username>das</Username>
+    <Password>saddasd</Password>
+  </Account>
 </Accounts>

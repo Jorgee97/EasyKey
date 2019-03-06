@@ -121,5 +121,27 @@ namespace EasyKey.BL
 
             return op;
         }
+
+        public OperationResult UpdateUserData(string newPassword)
+        {
+            var op = new OperationResult();
+            var fileManager = new FileManager();
+            op = LoginUser();
+
+            if(op.Success)
+            {
+                try
+                {
+                    var validateNewPassword = StringManager.ValidatePassword(newPassword);
+                    var updateUser = fileManager.UpdateConfigFile(this.FileConfigPath, this, newPassword);
+                } catch (ArgumentException e)
+                {
+                    op.Success = false;
+                    op.Message = e.Message;
+                }
+            }
+            
+            return op;
+        }
     }
 }

@@ -50,7 +50,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Grid.Row="5" Grid.Column="0" x:Name="btnSettings" Content="Settings" Margin="16" FontFamily="Quicksand" FontSize="14">
+        <Button Grid.Row="5" Grid.Column="0" x:Name="btnSettings" Content="Settings" Margin="16" FontFamily="Quicksand" FontSize="14" Click="BtnSettings_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FF4AFACE"/>

@@ -30,12 +30,12 @@ namespace EasyKey.App
         public GridPage(User userInformation)
         {
             UserInformation = userInformation;
-            InitializeComponent();
-            DisplayAccounts();
+            InitializeComponent();       
         }
 
         private void DisplayAccounts()
         {
+            AccountHolder.Items.Clear();
             var fileManager = new FileManager();
             List<Account> accounts = fileManager.ReadEasyKeyFile(UserInformation.FilePath);
 
@@ -43,7 +43,11 @@ namespace EasyKey.App
             {
                 AccountHolder.Items.Add(account);
             }
+        }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            DisplayAccounts();
         }
     }
 }

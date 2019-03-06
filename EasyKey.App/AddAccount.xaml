@@ -15,8 +15,9 @@
         <TextBox x:Name="Username" HorizontalAlignment="Left" Height="25" Margin="230,158,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="316" FontFamily="Quicksand"/>
         <TextBox x:Name="Email" HorizontalAlignment="Left" Height="25" Margin="230,208,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="316" FontFamily="Quicksand"/>
         <TextBox x:Name="Password" HorizontalAlignment="Left" Height="25" Margin="230,258,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="316" FontFamily="Quicksand"/>
-        <Button x:Name="btnAdd" Content="Add" Margin="263,317,0,113" Width="255" VerticalAlignment="Center" HorizontalAlignment="Left" Click="BtnAdd_Click"/>
+        <Button x:Name="btnAdd" Content="Add" Margin="349,312,0,118" Width="197" VerticalAlignment="Center" HorizontalAlignment="Left" Click="BtnAdd_Click"/>
         <Label Content="Email:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,183,0,0" FontFamily="Quicksand" Foreground="White" />
         <Label Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,231,0,0" FontFamily="Quicksand" Foreground="White" />
+        <Button x:Name="btnCancel" Content="Cancel" Margin="230,312,0,118" Width="94" VerticalAlignment="Center" HorizontalAlignment="Left" Click="BtnCancel_Click"/>
     </Grid>
 </Page>

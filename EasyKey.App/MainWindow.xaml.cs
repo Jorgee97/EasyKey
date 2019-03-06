@@ -41,5 +41,11 @@ namespace EasyKey.App
             var addAccount = new AddAccount(UserInformation);
             Content.Navigate(addAccount);
         }
+
+        private void BtnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            var settings = new SettingsPage(UserInformation);
+            Content.Navigate(settings);
+        }
     }
 }

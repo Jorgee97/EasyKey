@@ -37,6 +37,7 @@ namespace EasyKey.App
         {
             AddNewAccount();
             ClearFields();
+            NavigateBack();
         }
 
         private void AddNewAccount()
@@ -50,10 +51,7 @@ namespace EasyKey.App
             };
 
             var op = account.AddAccount(UserInformation);
-            if (op.Success)
-            {
-                MessageBox.Show("The new account was created.");
-            }
+            if (!op.Success) MessageBox.Show(op.Message);            
         }
 
         private void ClearFields()
@@ -62,6 +60,16 @@ namespace EasyKey.App
             Name.Text = String.Empty;
             Username.Text = String.Empty;
             Password.Text = String.Empty;
+        }
+
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateBack();
+        }
+
+        private void NavigateBack()
+        {
+            NavigationService.GoBack();
         }
     }
 }

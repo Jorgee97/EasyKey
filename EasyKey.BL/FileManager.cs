@@ -39,6 +39,17 @@ namespace EasyKey.BL
             return true;
         }
 
+        public User UpdateConfigFile(string path, User user, string newPassword)
+        {
+            XmlDocument xmlDocument = new XmlDocument();
+            xmlDocument.Load(path);
+
+            xmlDocument.SelectSingleNode("Configuration/Parameters/Password").InnerText = newPassword;
+            xmlDocument.Save(path);
+
+            return ReadConfigFile(path);
+        }
+
         public bool ValidateFileExist(string path)
         {
             return File.Exists(path);

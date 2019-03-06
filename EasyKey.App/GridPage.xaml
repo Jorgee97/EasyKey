@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:EasyKey.App"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="GridPage">
+      Title="GridPage" Loaded="Page_Loaded">
 
     <Grid>
         <DataGrid x:Name="AccountHolder" Grid.Column="1" Margin="16" Grid.RowSpan="6" >

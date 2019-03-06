@@ -24,3 +24,5 @@ C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\AddAccount.g.cs
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\GridPage.g.cs
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\AddAccount.baml
 C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\GridPage.baml
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\SettingsPage.g.cs
+C:\Users\Coreman\source\repos\EasyKey.App\EasyKey.App\obj\Debug\SettingsPage.baml
