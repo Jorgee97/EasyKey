@@ -9,8 +9,15 @@
       Title="GridPage" Loaded="Page_Loaded">
 
     <Grid>
-        <DataGrid x:Name="AccountHolder" Grid.Column="1" Margin="16" Grid.RowSpan="6" >
+        <DataGrid x:Name="AccountHolder" AutoGenerateColumns="False" Grid.Column="1" Margin="16" Grid.RowSpan="6" FontFamily="Quicksand" SelectionMode="Single" CanUserDeleteRows="False" IsReadOnly="True" CellEditEnding="AccountHolder_CellEditEnding" >
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="OptionEdit" Header="Edit" Click="OptionEdit_Click" />
+                    <MenuItem x:Name="OptionDelete" Header="Delete" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
             <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=AccountID}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="ID"/>
                 <DataGridTextColumn Binding="{Binding Path=Name}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Name"/>
                 <DataGridTextColumn Binding="{Binding Path=Username}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Username"/>
                 <DataGridTextColumn Binding="{Binding Path=Email}" ClipboardContentBinding="{x:Null}" FontFamily="Quicksand" Header="Email"/>

@@ -101,7 +101,8 @@ namespace EasyKey.BL
 
             XDocument easyKeyFile = XDocument.Load(path);
             XElement root = new XElement("Account");
-            root.Add(new XElement("Name", accountInformation.Name),
+            root.Add(new XElement("ID", accountInformation.AccountID),
+                new XElement("Name", accountInformation.Name),
                 new XElement("Email", accountInformation.Email),
                 new XElement("Username", accountInformation.Username),
                 new XElement("Password", accountInformation.Password));
@@ -111,7 +112,7 @@ namespace EasyKey.BL
             return true;
         }
 
-        public List<Account> ReadEasyKeyFile(string path)
+        public IEnumerable<Account> ReadEasyKeyFile(string path)
         {
             StringManager.ValidateString(path, nameof(path));
             List<Account> accounts = new List<Account>();
@@ -123,6 +124,7 @@ namespace EasyKey.BL
             {
                 accounts.Add(new Account
                 {
+                    AccountID = Int32.Parse(account.Element("ID").Value),
                     Name = account.Element("Name").Value,
                     Username = account.Element("Username").Value,
                     Email = account.Element("Email").Value,
@@ -131,6 +133,18 @@ namespace EasyKey.BL
             }
 
             return accounts;
+        }
+
+        public void DeleteAccountFromEasyKeyFile(string path, Account account)
+        {
+            StringManager.ValidateString(path, nameof(path));
+
+            XElement easyFile = XElement.Load(path);
+            easyFile.Descendants("Account")
+                .Where(x => x.Element("ID").Value == account.AccountID.ToString())
+                .Single<XElement>()
+                .Remove();
+            easyFile.Save(path);
         }
     }
 }

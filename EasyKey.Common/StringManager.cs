@@ -28,5 +28,10 @@ namespace EasyKey.Common
 
             return true;
         }
+
+        public static int GenerateID()
+        {
+            return new Random().Next();
+        }
     }
 }

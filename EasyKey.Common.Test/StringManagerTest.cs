@@ -52,5 +52,13 @@ namespace EasyKey.BL.Test
 
             var actual = StringManager.ValidatePassword(password);
         }
+
+        public void ValidateGenerateIDTest()
+        {
+            var expectedDifferent = StringManager.GenerateID();
+            var actual = StringManager.GenerateID();
+
+            Assert.AreNotEqual(expectedDifferent, actual);
+        }
     }
 }

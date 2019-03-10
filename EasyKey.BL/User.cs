@@ -30,7 +30,7 @@ namespace EasyKey.BL
         public OperationResult AttempLoginOrCreateConfigFile()
         {
             if (File.Exists(FileConfigPath)) return LoginUser();
-            return CreateUserConfigFile();
+            return CreateNecessaryFiles();
         }
 
         public OperationResult LoginUser()
@@ -70,6 +70,14 @@ namespace EasyKey.BL
             return op;
         }
 
+        public OperationResult CreateNecessaryFiles()
+        {
+            var op = new OperationResult();
+            op = CreateEasyKeyFile();
+            if (op.Success) op = CreateUserConfigFile();
+
+            return op;
+        }
 
         public OperationResult CreateUserConfigFile()
         {
@@ -98,6 +106,30 @@ namespace EasyKey.BL
                     op.Message = "There was a problem trying to create the config file.";
                     LoggerHelper.Log(LoggerTarget.File, $"{e.GetType()} --> {e.Message}");
                 }
+            }
+
+            return op;
+        }
+
+        public OperationResult CreateEasyKeyFile()
+        {
+            var fileManager = new FileManager();
+            var op = new OperationResult();
+            op.Success = true;
+            try
+            {
+                fileManager.CreateEasyKeyFile(this.FilePath);
+            }
+            catch (ArgumentException e)
+            {
+                op.Success = false;
+                op.Message = e.Message;
+            }
+            catch(DirectoryNotFoundException e)
+            {
+                op.Success = false;
+                op.Message = "There was a problem trying to create the EasyKey file.";
+                LoggerHelper.Log(LoggerTarget.File, $"{e.GetType()} --> {e.Message}");
             }
 
             return op;

@@ -10,6 +10,7 @@ namespace EasyKey.BL
 {
     public class Account
     {
+        public int AccountID { get; set; } = StringManager.GenerateID();
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
@@ -31,6 +32,39 @@ namespace EasyKey.BL
             {
                 if (!doesEasyKeyFileExist) fileManager.CreateEasyKeyFile(userInformation.FilePath);
                 fileManager.AppendToEasyKeyFile(userInformation.FilePath, this);
+            }
+            catch (ArgumentException e)
+            {
+                op.Success = false;
+                op.Message = e.Message;
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                op.Success = false;
+                op.Message = e.Message;
+                LoggerHelper.Log(LoggerTarget.File, e.Message);
+            }
+
+            return op;
+        }
+
+        public IEnumerable<Account> GetAccounts(User userInformation)
+        {
+            // TODO: Validate the argument exeption
+            return new FileManager().ReadEasyKeyFile(userInformation.FilePath);
+        }
+
+        public OperationResult DeleteAccount(User userInformation, Account account)
+        {
+            var op = new OperationResult
+            {
+                Success = true
+            };
+
+            try
+            {
+                var fileManager = new FileManager();
+                fileManager.DeleteAccountFromEasyKeyFile(userInformation.FilePath, account);
             }
             catch (ArgumentException e)
             {

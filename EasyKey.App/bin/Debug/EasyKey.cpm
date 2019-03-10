@@ -1,39 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Accounts>
   <Account>
+    <ID>138906417</ID>
+    <Name>dasd</Name>
+    <Email>ada</Email>
+    <Username>dsad</Username>
+    <Password>asda</Password>
+  </Account>
+  <Account>
+    <ID>1424582905</ID>
     <Name>Facebook</Name>
-    <Email>john@doe.com</Email>
-    <Username>John Doe</Username>
-    <Password>somepassword</Password>
-  </Account>
-  <Account>
-    <Name>Instagram</Name>
-    <Email>john@doe.com2</Email>
-    <Username>John Doe2</Username>
-    <Password>somepassword2</Password>
-  </Account>
-  <Account>
-    <Name>MySpace</Name>
-    <Email>theemail@email.com</Email>
-    <Username>theuser</Username>
-    <Password>apassword</Password>
-  </Account>
-  <Account>
-    <Name>d</Name>
-    <Email>d</Email>
-    <Username>d</Username>
-    <Password>d</Password>
-  </Account>
-  <Account>
-    <Name></Name>
-    <Email></Email>
-    <Username></Username>
-    <Password></Password>
-  </Account>
-  <Account>
-    <Name>da</Name>
-    <Email>dsa</Email>
-    <Username>das</Username>
-    <Password>saddasd</Password>
+    <Email>facebook@gmail.com</Email>
+    <Username>FacebookUser</Username>
+    <Password>facebookisweird</Password>
   </Account>
 </Accounts>

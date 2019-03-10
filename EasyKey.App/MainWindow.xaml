@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="4*" />
         </Grid.ColumnDefinitions>
         <Viewbox Grid.Row="0" Grid.Column="0">
             <Label Content="EasyKey" Margin="16,0" FontFamily="Rockwell Extra Bold" FontSize="40" Background="Transparent" Foreground="#FF4DF9D3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
